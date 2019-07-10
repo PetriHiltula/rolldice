@@ -9,6 +9,9 @@ use regex::Regex;
 use ansi_term::Colour;
 use ansi_term::Style;
 
+#[cfg(target_os = "windows")]
+use ansi_term::enable_ansi_support;
+
 fn main() {
   #[cfg(target_os = "windows")]
   let enabled = ansi_term::enable_ansi_support();
