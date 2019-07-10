@@ -10,6 +10,9 @@ use ansi_term::Colour;
 use ansi_term::Style;
 
 fn main() {
+  #[cfg(target_os = "windows")]
+  let enabled = ansi_term::enable_ansi_support();
+
   let args: Vec<String> = env::args().collect();
   if args.len() <= 1 {
     println!("{}", Style::new().bold().paint("Dice roll is missing"));
