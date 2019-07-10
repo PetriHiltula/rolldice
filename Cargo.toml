@@ -1,0 +1,10 @@
+[package]
+name = "rolldice"
+version = "0.1.0"
+authors = ["Petri Hiltula <petri.hiltula@mystara.net>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.7"
+regex = "1"
+ansi_term = "0.9"
